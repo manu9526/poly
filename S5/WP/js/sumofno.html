@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sum of n natural numbers</title>
+  </head>
+  <body bgcolor="lightgreen">
+    <script>
+      sum = 0;
+      num = parseInt(prompt("Enter a positive integer"));
+      for (i = 1; i <= num; i++) {
+        sum += i;
+      }
+      document.write(
+        "sum of first",num,"natural numbres are ",sum,
+        "<br>"
+      );
+
+      while(i<=num) {
+        sum += i;
+        i++;
+      }
+      document.write("the sum of first",num,"natural numbres using while loop",sum,"<br>"
+      );
+
+      do {
+        sum +=i;
+        i++;
+        
+      }
+      while (i<=num);
+      document.write("the sum of first",num,"natural numbres using do_while loop",sum,);
+
+    </script>
+  </body>
+</html>
