@@ -4,24 +4,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Final Grade of Student</title>
+    <title>Grade</title>
 </head>
 <body>
-     </span>
-    <h2>Enter marks of th student for 3 subjects</h2>
-    <label>Maths</label>
-    <input type="text" id="sub1"> <br> <br>
-
-    <label> Physics </label>
-    <input type="text" id="sub2"> <br> <br>
-
-    <label> Chemistry</label>
-    <input type="text" id="sub3"> <br> <br>
-
-    <button onclick="grade()">Find Grade</button>
     
-    <h4> Total Marks :    <div id="mark"></div>
+    <h1>Enter makrs of 3 subjects</h1>
+    <label>Maths</label>
+    <input type="text" id="sub1" > <br> <br> 
+    <label>Chem</label>
+    <input type="text" id="sub2"> <br> <br>
+    <label>Phy</label>
+    <input type="text" id="sub3"> <br> <br>
+    <button onclick="findGrade()">Find grade</button>
+    <h3>Total Marks :
+        <span id="marks"></span>
+    </h3>
+    <h3>
+        Percentage: 
+        <span id="per"></span>
+    </h3>
+    <h3>Grade :
+        <span id="grade"></span>
+    </h3>
 
 
+   
+    <script>
+
+        function findGrade(){
+            sub1 = parseInt(document.getElementById("sub1").value);
+            sub2 = parseInt(document.getElementById("sub2").value);
+            sub3 = parseInt(document.getElementById("sub3").value);
+            if(sub1>100 || sub2>100 || sub3>100){
+                alert("enter valid marks");
+            } else{
+                totalmark = parseInt(sub1+sub2+sub3);
+                document.getElementById("marks").innerHTML = totalmark + "/300";
+
+                per = (totalmark *100)/300;
+                document.getElementById("per").innerHTML = per.toFixed()+"%";
+
+                switch(Math.trunc(per/10)){
+
+                    case 10: grade = "S";
+                        break;
+                    case 9: grade = "S";
+                        break;
+                    case 8: grade = "A";
+                        break;
+                        case 7: grade = "B";
+                        break;
+                        case 6: grade = "B";
+                        break;
+                        case 5: grade = "C";
+                        break;
+                        case 4: grade = "D";
+                        break;    
+                        default:
+                        grade ="failed";
+                        break;
+                }
+                document.getElementById("grade").innerHTML= grade;
+            }
+        }
+
+
+
+    </script>
 </body>
 </html>

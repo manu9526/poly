@@ -1,0 +1,22 @@
+
+
+body {
+
+ background: #0a0808f8;
+  
+}
+
+
+
+.navbar {
+    background-color: #1a6c65;
+  }
+
+
+  /*reg page */
+  .card {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #1a6c65;
+  }
+  .btn{background-color: #000;}

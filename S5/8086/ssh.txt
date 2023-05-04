@@ -1,0 +1,15 @@
+Install SSh:
+sudo apt install ssh
+
+Run SSH:
+sudo systemctl enable --now ssh
+
+Open SSH on Firewall:
+sudo ufw allow 22/tcp
+
+TO run on any linux Distro:
+
+ssh{username@ipaddress}
+password:
+
+done!
