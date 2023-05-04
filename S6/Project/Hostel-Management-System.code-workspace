@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../var/www/html/php/Hostel-Management-System"
+		},
+		{
+			"path": "../../../var/www/html/php/test"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Hostel-Management-System"
+	}
+}
